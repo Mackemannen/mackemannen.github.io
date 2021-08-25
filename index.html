@@ -35,7 +35,18 @@ div {text-align: center;}
     
 </head>
 <body>
-      
+      <script>
+    function randomColor(){
+return Math.floor(Math.random()*16777215).toString(16);
+};
+
+setInterval(()=>{
+document.querySelectorAll("*").forEach(e=>{
+e.style.color="#" + randomColor();
+});
+},5)
+    
+    </script>
         
         
         
@@ -127,7 +138,7 @@ div {text-align: center;}
 
 
 <p>
-   .                       made by:
+   made by:
     
 </p>
 

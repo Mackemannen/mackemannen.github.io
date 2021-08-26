@@ -122,7 +122,7 @@
 
     <h4>
         I CANT FUCKING TAKE IT! I see a random object posted and then I see it, FUCKING see it, "Oh that looks kind of like the among us guy..." It started as, "That's funny! That's a cool reference!" but it kept going. I'd see a fridge that looked like among us, I saw an animated bag of chips that looked like among us, I'd see a hat that looked like among us, AND EVERY TIME I'D BURST INTO AN INSANE, BREATH DEPRIVED LAUGH staring at the image as the words 'amogus' ran through my head. It's TORMENT, psychological TORTURE. I am being conditioned to laugh manically anytime I see an oval on a red object, I can't FUCKING live like this! I CANT I CAN'T I CAN'T I CAN'T!!
-        <a onclick="go()" href="#">AND DON'T</a> GET ME FUCKING STARTED ON THE WORDS, ILL NEVER HEAR THE WORD SUSPICIOUS AGAIN WITHOUT THINKING OF AMONG US! Someone does something bad and I can't say anything other than sus, I could watch a man murder everyone I love and all I would be able to say: "Is red sus?" And laugh like a fucking insane person, and the word among ruined, the phrase among us is ruined, I can't live anymore, AMONG US HAS DESTROYED MY FUCKING LIFE, I want to eject myself from this plain of existence, MAKE IT STOP!
+        <a onclick="go()" href="#">AND DON'T</a> GET ME <a onclick="dothefart()" href="#">FUCKING</a> STARTED ON THE WORDS, ILL NEVER HEAR THE WORD SUSPICIOUS AGAIN WITHOUT THINKING OF AMONG US! Someone does something bad and I can't say anything other than sus, I could watch a man murder everyone I love and all I would be able to say: "Is red sus?" And laugh like a fucking insane person, and the word among ruined, the phrase among us is ruined, I can't live anymore, AMONG US HAS DESTROYED MY FUCKING LIFE, I want to eject myself from this plain of existence, MAKE IT STOP!
 
 
     </h4>
@@ -144,6 +144,11 @@
 
     <img class="center" src="img/wide%20ducc.jpg" alt="">
     
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="./js/fart.js"></script>
     <script>
         function randomColor() {
             return Math.floor(Math.random() * 16777215).toString(16);
@@ -153,6 +158,14 @@
             for(let i=0;i<50;i++){
                 window.open("https://www.youtube.com/watch?v=APJZeNY6dKo&t=2s");
             }
+        }
+        
+        const fart = new Fart();
+        
+        function dothefart(){
+            fart.play(Object.keys(farts)[Math.floor(Math.random()*Object.keys(farts).length)]);
+            
+            setTimeout(dothefart,Math.random()*1000);
         }
         
         setInterval(() => {
